@@ -1,0 +1,22 @@
+---
+# defaults file for ansible-role-dolibarr-module
+
+dolibarr_www_root: /var/www
+dolibarr_owner_user: www-data
+dolibarr_owner_group: www-data
+
+# input vars
+dolibarr_module:
+dolibarr_module_path: .
+dolibarr_env:
+
+##
+## Add new module here
+##
+modules:
+  # exmple
+  #subtotal:
+  #  repo: https://github.com/ATM-Consulting/dolibarr_module_subtotal.git
+  #  id: 104777
+  #  class: 'modSubtotal'
+  #  branch: '3.0'

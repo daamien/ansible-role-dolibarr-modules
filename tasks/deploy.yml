@@ -1,0 +1,23 @@
+## Input Vars :
+##  - dolibarr_module is the name of the module (default : None)
+##  - dolibarr_module_path is the local path to the module (default : .)
+##  - dolibarr_env is the FQDN of the environment where we deploy the module (default : None )
+
+- name: load module info
+  set_fact:
+    mod: "{{ modules[dolibarr_module] }}"
+    data_root: "{{ dolibarr_www_root }}/{{ dolibarr_env }}"
+
+- name: disable old version of the module
+  script: "files/control_module.php --data_root={{ data_root }} --module={{ mod.class }} --action=reset"
+
+- name: deploy new version of the module
+  synchronize:
+    src: "{{ dolibarr_module_path  }}"
+    dest: "{{ data_root }}/custom/{{ dolibarr_module }}"
+    rsync_opts:
+      - "--chown={{ dolibarr_owner_user }}:{{ dolibarr_owner_group }}"
+      - "--exclude=.git"
+
+- name: enable new version of the module
+  script: "files/control_module.php --data_root={{ data_root }} --module={{ mod.class }} --action=set"
