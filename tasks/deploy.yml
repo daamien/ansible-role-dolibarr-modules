@@ -1,3 +1,4 @@
+---
 ## Input Vars :
 ##  - dolibarr_module is the name of the module (default : None)
 ##  - dolibarr_module_path is the local path to the module (default : .)

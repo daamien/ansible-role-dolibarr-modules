@@ -13,10 +13,9 @@ dolibarr_env:
 ##
 ## Add new module here
 ##
-modules:
-  # exmple
-  #subtotal:
-  #  repo: https://github.com/ATM-Consulting/dolibarr_module_subtotal.git
-  #  id: 104777
-  #  class: 'modSubtotal'
-  #  branch: '3.0'
+# modules:
+#   subtotal:
+#     repo: https://github.com/ATM-Consulting/dolibarr_module_subtotal.git
+#     id: 104777
+#     class: 'modSubtotal'
+#     branch: '3.0'

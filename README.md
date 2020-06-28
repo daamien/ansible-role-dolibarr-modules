@@ -1,6 +1,9 @@
 Role Name
 =========
 
+![Ansible Lint](https://github.com/daamien/ansible-role-dolibarr-modules/workflows/Ansible%20Lint/badge.svg)
+![YAML Lint](https://github.com/daamien/ansible-role-dolibarr-modules/workflows/Yaml%20Lint/badge.svg)
+
 Manage Dolibarr modules
 
 Role Variables
