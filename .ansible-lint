@@ -1,0 +1,5 @@
+#skip_list:
+#  - '301'
+#  - '303'  # see FIXME in sync.yml
+#  - '305'  # see FIXME in sync.yml
+
